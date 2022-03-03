@@ -1,10 +1,10 @@
 package dao;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import domain.SoloVO;
@@ -49,8 +49,35 @@ public class SoloDAO extends DbUtil {
 	
 	public List<SoloVO> read(SoloVO vo) {
 		
-		
-		return null;
+		StringBuffer sql = new StringBuffer();
+		sql.append(" SELECT * FROM solo ");
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		//*** 빼먹은 것
+		List<SoloVO> list = new ArrayList<SoloVO>();
+		int idx = 0;
+		try {
+			conn = dbConn();
+			stmt = conn.prepareStatement(sql.toString());
+			//result값 반환 필요***
+			ResultSet rs = stmt.executeQuery();
+			
+			while (rs.next()) {
+				SoloVO vo2 = new SoloVO(
+						rs.getInt("num"),
+						rs.getString("strMan"),
+						rs.getDate("dateMan")
+						);
+						// 활성화되기 위해서는 57line이 꼭 필요함.
+						list.add(vo2);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//메소드를 만들었을 때 까지만 하면 오류가 뜨지 않게 하기 위해 null값을 주나
+		//read()문이 완성됨에 따라 list로 바꿔준다.
+		return list;
 		
 	}
 }
