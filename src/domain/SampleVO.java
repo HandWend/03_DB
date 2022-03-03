@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class SampleVO {
 
-	private int num;
+	private int num; 
 	private String strData;
 	private Date sampleDate;
 	

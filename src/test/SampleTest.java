@@ -10,7 +10,7 @@ import dao.SampleDAO;
 import domain.SampleVO;
 
 public class SampleTest {
-
+ 
 	public static void main(String[] args) {
 		SampleDAO dao =  new SampleDAO();
 		SampleVO createVo = new SampleVO(0, "가변폭문자열", new Date());
