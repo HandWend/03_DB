@@ -49,8 +49,4 @@ public class SampleVO {
 	public void setSampleDate(Date sampleDate) {
 		this.sampleDate = sampleDate;
 	}
-	
-	
-	
-	
 }

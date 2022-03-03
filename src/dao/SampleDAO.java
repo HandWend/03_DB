@@ -34,7 +34,7 @@ public class SampleDAO extends DbUtil {
 		StringBuffer sql = new StringBuffer();
 
 		sql.append(" \n INSERT INTO sample ");
-		sql.append(" \n (num, strDate, sampleDate) ");
+		sql.append(" \n (num, strData, sampleDate) ");
 		sql.append(" \n VALUES (null, ?, curdate()) ");
 
 		Connection conn = null;
@@ -112,7 +112,7 @@ public class SampleDAO extends DbUtil {
 			conn = dbConn();
 			stmt = conn.prepareStatement(sql.toString());
 			//idx
-			stmt.setInt(1, vo.getNum());
+			//stmt.setInt(1, vo.getNum());
 			//쿼리실행
 			rs = stmt.executeQuery();
 			
