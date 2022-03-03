@@ -9,7 +9,7 @@ import java.util.List;
 import dao.SampleDAO;
 import domain.SampleVO;
 
-public class SampleTest {
+public class SampleTest { 
  
 	public static void main(String[] args) {
 		SampleDAO dao =  new SampleDAO();

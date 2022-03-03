@@ -14,7 +14,7 @@ package dao;
  *  1. while문 돌리는 것 기억하고 필요성 인식하기
  *  2.
  */
-import java.sql.Connection;
+import java.sql.Connection;  
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

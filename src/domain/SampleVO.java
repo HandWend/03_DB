@@ -2,7 +2,7 @@ package domain;
 
 import java.util.Date;
 
-public class SampleVO {
+public class SampleVO { 
 
 	private int num; 
 	private String strData;
